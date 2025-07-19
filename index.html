@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ScriptSensei Terminal - System Compromised</title>
+    <title>Terminal ScriptSensei - Système Compromis</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+      * {
+        font-family: 'JetBrains Mono', 'Courier New', monospace !important;
+      }
+      
+      body {
+        background: #000;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+
+      /* Custom scrollbar for terminal */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #001100;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #00ff00;
+        border-radius: 4px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: #00cc00;
+      }
+
+      /* Selection styling */
+      ::selection {
+        background: #00ff00;
+        color: #000;
+      }
+
+      /* Prevent text selection on system messages */
+      .no-select {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      /* Glitch animation */
+      @keyframes glitch {
+        0% { transform: translate(0); }
+        20% { transform: translate(-2px, 2px); }
+        40% { transform: translate(-2px, -2px); }
+        60% { transform: translate(2px, 2px); }
+        80% { transform: translate(2px, -2px); }
+        100% { transform: translate(0); }
+      }
+
+      .glitch {
+        animation: glitch 0.3s ease-in-out infinite;
+      }
+
+      /* Typing animation */
+      @keyframes typing {
+        from { width: 0; }
+        to { width: 100%; }
+      }
+
+      .typing {
+        overflow: hidden;
+        border-right: 2px solid #00ff00;
+        white-space: nowrap;
+        animation: typing 2s steps(40, end), blink-caret 0.75s step-end infinite;
+      }
+
+      @keyframes blink-caret {
+        from, to { border-color: transparent; }
+        50% { border-color: #00ff00; }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
